@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #FFFFFF;
+    --surface: #F5F7F8;
+    --ink: #0F1A1F;
+    --muted: #8F9AA0;
+    --hero-overlay: rgba(31, 59, 69, 0.55);
+    --accent: #22A6C0;
+    --accent-soft: #E3F4F8;
+    --card-blue: #DCEAF4;
+    --border: #E6EAEC;
+    --status-success: #1F9D74;
+    --status-warning: #E2A23B;
+    --status-danger: #D9534F;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--ink);
+    background-color: var(--bg);
+    overflow-x: hidden;
+  }
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Infinite ticker animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+

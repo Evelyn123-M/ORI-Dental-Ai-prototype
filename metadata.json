@@ -1,0 +1,6 @@
+{
+  "name": "ORI Dental AI — Clinical Assessment & Treatment Planning",
+  "description": "AI-Powered Dental Diagnosis & Treatment Planning Platform for ORI Dental Clinic, Kigali. Clinical decision support with mandatory dentist confirmation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
